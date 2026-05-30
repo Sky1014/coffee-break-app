@@ -4,6 +4,8 @@
 
 Work in focused 30-minute brewing sessions. When the timer ends, take a 60-second body reset — stretch, breathe, and come back refreshed.
 
+**[Download Windows Portable](https://github.com/Sky1014/coffee-break-app/releases/latest)** — no installer needed, just run.
+
 ---
 
 ## ✨ Features
