@@ -4,7 +4,7 @@
 
 Work in focused 30-minute brewing sessions. When the timer ends, take a 60-second body reset — stretch, breathe, and come back refreshed.
 
-**[Download Windows Portable](https://github.com/Sky1014/coffee-break-app/releases/latest)** — no installer needed, just run.
+**[Download Windows Portable](https://github.com/Sky1014/coffee-break-app/releases/latest)** — no installer needed, just extract the zip and run.
 
 ---
 
@@ -14,17 +14,14 @@ Work in focused 30-minute brewing sessions. When the timer ends, take a 60-secon
 - **System tray app** — runs quietly in the background
 - **Full-screen break overlay** — impossible to ignore
 - **Auto pause/resume** — detects screen lock and adapts
-- **Procedural audio** — synthesized coffee-pour sound effects (no audio files needed)
+- **Procedural audio** — synthesized coffee-pour sound effects
 - **CSS animations** — smooth progress ring, coffee cup, and steam effects
 - **Portable build** — no installer required, just run
 
-### iOS / watchOS Prototype (Swift)
-- **Pure functional state machine** — 11 states, 16 events, fully testable
-- **3 break modes** — Gentle (45 min), Standard (35 min), Strict (25 min)
-- **Snooze guardrail** — too many snoozes locks you into a mandatory break
-- **Natural override detection** — detects when you naturally stand up
-- **Daily summary** — track your break compliance over time
-- **SwiftUI** — native iOS 17+ and watchOS 10+ interfaces
+### iOS / watchOS (Work in Progress)
+The mobile and watch prototype is under development. The core logic and SwiftUI skeleton are in place, but the full iOS/watchOS app is not yet complete.
+
+**Contributions welcome!** If you're a Swift or iOS developer interested in helping bring Coffee Break to Apple platforms, feel free to open an issue or submit a pull request.
 
 ---
 
@@ -44,14 +41,13 @@ Work in focused 30-minute brewing sessions. When the timer ends, take a 60-secon
 
 ```
 coffee-break-app/
-├── CoffeeBreakDesktop/     # Electron desktop app
+├── CoffeeBreakDesktop/     # Electron desktop app (Windows, ready)
 │   ├── electron/           # Main process & preload scripts
 │   ├── src/                # React frontend
 │   ├── assets/             # Icons & audio
-│   ├── scripts/            # Build & packaging scripts
-│   └── package.json
+│   └── scripts/            # Build & packaging scripts
 │
-└── CoffeeBreakPrototype/   # iOS/watchOS Swift prototype
+└── CoffeeBreakPrototype/   # iOS/watchOS Swift prototype (in progress)
     ├── Shared/             # Core state machine & models
     ├── iOSApp/             # iOS SwiftUI views
     ├── WatchApp/           # watchOS SwiftUI views
@@ -62,60 +58,43 @@ coffee-break-app/
 
 ## 🚀 Getting Started (Desktop)
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) 18+
-- npm 9+
+Download the latest release from the [Releases page](https://github.com/Sky1014/coffee-break-app/releases/latest), extract the zip, and run `CoffeeBreak.exe`. No installation needed.
 
-### Install & Run
-```bash
-cd CoffeeBreakDesktop
-npm install
-npm run dev
-```
+**Requirements:** Windows 10/11 x64
 
-### Build Portable Release
-```bash
-npm run package-portable
-```
-
-The portable `.exe` will be in `CoffeeBreakDesktop/release/`.
+For developers who want to build from source, Node.js 18+ is required. The desktop app uses Vite + Electron and can be run locally after installing dependencies.
 
 ---
 
-## 🧪 Running Tests (Swift Prototype)
+## 🧪 Swift Prototype
 
-Open `CoffeeBreakPrototype` as a local Swift package in Xcode, link `CoffeeBreakCore` to a test target, and run:
-
-```bash
-swift test
-```
+Open `CoffeeBreakPrototype` as a local Swift package in Xcode and link `CoffeeBreakCore` to a test target to run the state machine unit tests.
 
 ---
 
 ## 📋 Break Modes
 
-| Mode | Work Interval | Vibe |
-|------|--------------|------|
-| Gentle | 45 min | Relaxed, for light workdays |
-| Standard | 35 min | Balanced, the default |
-| Strict | 25 min | Intense, for deep work sessions |
+The desktop app currently runs in **Standard mode** (30-minute work sessions, 60-second breaks). Additional modes and fully customizable intervals are planned but not yet implemented.
 
-All modes enforce a 60-second break window.
+| Mode | Work Interval | Status |
+|------|--------------|--------|
+| Standard | 30 min | ✅ Available |
+| Gentle | 45 min | 🚧 Coming soon |
+| Strict | 25 min | 🚧 Coming soon |
+| Custom intervals | User-defined | 🚧 Coming soon |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how to get started:
+Contributions are welcome, especially for the iOS/watchOS side! Here's how to get involved:
 
 1. Fork this repository
-2. Create a feature branch (`git checkout -b feature/my-feature`)
-3. Make your changes
-4. Commit with a clear message (`git commit -m 'Add my feature'`)
-5. Push to your fork (`git push origin feature/my-feature`)
-6. Open a Pull Request
+2. Create a feature branch
+3. Make your changes and commit with a clear message
+4. Push to your fork and open a Pull Request
 
-Please keep PRs focused and well-documented. If you're planning a large change, open an issue first to discuss.
+If you're planning a large change, open an issue first to discuss. All skill levels welcome.
 
 ---
 
