@@ -14,3 +14,14 @@ Thumbs.db
 # Screenshots / temp
 *.png
 !assets/*.png
+
+# Node
+node_modules/
+dist/
+release/
+
+# Swift / Xcode
+.build/
+DerivedData/
+*.xcuserdata
+xcuserdata/

@@ -11,12 +11,16 @@ Work in focused 30-minute brewing sessions. When the timer ends, take a 60-secon
 ## ✨ Features
 
 ### Desktop (Windows)
+- **Settings window** — configure work/break durations, language, and more
 - **System tray app** — runs quietly in the background
 - **Full-screen break overlay** — impossible to ignore
+- **Custom intervals** — adjustable work (5–120 min) and break (0.5–10 min) durations
 - **Auto pause/resume** — detects screen lock and adapts
-- **Procedural audio** — synthesized coffee-pour sound effects
+- **Procedural audio** — synthesized coffee-pour sound effects (can be muted)
 - **CSS animations** — smooth progress ring, coffee cup, and steam effects
-- **Portable build** — no installer required, just run
+- **Bilingual** — English and Chinese (auto-detect, manual switch)
+- **Launch at startup** — optional, configurable in settings
+- **Portable + Installer** — extract-and-run ZIP, or NSIS setup with desktop shortcut
 
 ### iOS / watchOS (Work in Progress)
 The mobile and watch prototype is under development. The core logic and SwiftUI skeleton are in place, but the full iOS/watchOS app is not yet complete.
@@ -58,7 +62,9 @@ coffee-break-app/
 
 ## 🚀 Getting Started (Desktop)
 
-Download the latest release from the [Releases page](https://github.com/Sky1014/coffee-break-app/releases/latest), extract the zip, and run `CoffeeBreak.exe`. No installation needed.
+**Option 1 — Installer (recommended):** Download `CoffeeBreak-x.x.x-Setup.exe` from the [Releases page](https://github.com/Sky1014/coffee-break-app/releases/latest), run it, and follow the wizard. Desktop shortcut and start menu entry are created automatically.
+
+**Option 2 — Portable:** Download the ZIP, extract it anywhere, and run `CoffeeBreak.exe`. No installation needed.
 
 **Requirements:** Windows 10/11 x64
 
@@ -74,14 +80,12 @@ Open `CoffeeBreakPrototype` as a local Swift package in Xcode and link `CoffeeBr
 
 ## 📋 Break Modes
 
-The desktop app currently runs in **Standard mode** (30-minute work sessions, 60-second breaks). Additional modes and fully customizable intervals are planned but not yet implemented.
+The desktop app supports fully customizable intervals via the settings window.
 
 | Mode | Work Interval | Status |
 |------|--------------|--------|
-| Standard | 30 min | ✅ Available |
-| Gentle | 45 min | 🚧 Coming soon |
-| Strict | 25 min | 🚧 Coming soon |
-| Custom intervals | User-defined | 🚧 Coming soon |
+| Custom | 5–120 min (default 30 min) | ✅ Available |
+| Custom break | 0.5–10 min (default 1 min) | ✅ Available |
 
 ---
 
