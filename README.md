@@ -12,13 +12,16 @@ Work in focused 30-minute brewing sessions. When the timer ends, take a 60-secon
 
 ### Desktop (Windows)
 - **Settings window** — configure work/break durations, language, and more
-- **System tray app** — runs quietly in the background
+- **System tray app** — runs quietly in the background, minimize to tray
 - **Full-screen break overlay** — impossible to ignore
 - **Custom intervals** — adjustable work (5–120 min) and break (0.5–10 min) durations
+- **Do Not Disturb mode** — pause reminders for 5–480 minutes via slider or tray menu
+- **Custom audio** — choose your own break sound (ogg/mp3/wav/m4a/aac/flac)
+- **In-app updates** — check for latest version on GitHub, download and apply with one click
 - **Auto pause/resume** — detects screen lock and adapts
 - **Procedural audio** — synthesized coffee-pour sound effects (can be muted)
 - **CSS animations** — smooth progress ring, coffee cup, and steam effects
-- **Bilingual** — English and Chinese (auto-detect, manual switch)
+- **Bilingual** — English and Chinese (auto-detect, manual switch), tray menus fully translated
 - **Launch at startup** — optional, configurable in settings
 - **Portable + Installer** — extract-and-run ZIP, or NSIS setup with desktop shortcut
 
@@ -86,6 +89,30 @@ The desktop app supports fully customizable intervals via the settings window.
 |------|--------------|--------|
 | Custom | 5–120 min (default 30 min) | ✅ Available |
 | Custom break | 0.5–10 min (default 1 min) | ✅ Available |
+| Do Not Disturb | 5–480 min | ✅ Available |
+
+---
+
+## 📝 Changelog
+
+### v0.3.0 (2026-06-18)
+- **Do Not Disturb mode** — slider (5–480 min), tray menu shortcuts, custom duration popup
+- **Custom audio** — pick local audio file for break sound, reset to default
+- **In-app updates** — check GitHub latest release, download ZIP, extract & overwrite, prompt restart
+- **Settings window redesign** — fixed 870px height, no scrollbar, side-by-side layout for audio+updates and startup+mute
+- **Full tray i18n** — all tray menu items (status, DND, settings, quit) follow language setting
+- **Removed default Electron menu bar** from settings window
+- **Softer break overlay shadows**
+- **Chinese README** (README.zh.md)
+
+### v0.2.1 (2026-06-02)
+- Initial public release
+- Custom work/break durations (5–120 min / 0.5–10 min)
+- System tray with basic menu
+- Full-screen break overlay with coffee cup animation
+- Bilingual support (English / Chinese)
+- Launch at startup, desktop shortcut creation
+- Portable ZIP + NSIS installer
 
 ---
 
